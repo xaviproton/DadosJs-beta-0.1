@@ -1,0 +1,115 @@
+:root {
+  --blue: #272643;
+  --blue2: #ffffff;
+  --blue3: #E3F6F5;
+  --blueSky: #809191;
+  --green: #2C698D;
+  --red: #7f7e9594;
+ 
+}
+@font-face {
+  font-family: blocks;
+  src: url(helveticanowtext-black-demo.ttf);
+}
+
+html{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ background-color: var(--white);
+  min-height: 100vh;
+  margin: 0;
+  font-family: blocks;
+}
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000060;
+  opacity: 0.7;
+  box-shadow: inset 0 0 200px rgba(0, 128, 0, 0.5);
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 55rem;
+  height: 50rem;
+  background-color: var(--blueSky);
+  border-radius: 1rem;
+  box-shadow: 10px 10px 5px 0px rgba(255, 255, 255, 1);
+  border: 1px dashed white;
+  padding: 10px;
+}
+
+#title {
+  font-size: 1.5rem;
+  filter: drop-shadow(5px 7px 4px rgba(0, 0, 0, 0.5));
+  color: var(--blue);
+}
+.resultadoContainer {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background-color: var(--red);
+  border-radius: 100%;
+  border: 1px dotted;
+  filter: drop-shadow(5px 7px 7px rgba(0, 0, 0, 0.5));
+  padding: 10px;
+  margin: 1rem;
+}
+.resultadoContainer h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blue2);
+}
+#boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 4rem;
+  margin-top: 1.5rem;
+  font-family: blocks;
+  border: none;
+  border-radius: 1rem;
+  background: linear-gradient(
+    to right,
+    var(--green),
+    var(--blueSky),
+    var(--blueSky),
+    var(--green)
+  );
+  filter: drop-shadow(5px 7px 7px rgba(0, 0, 0, 0.5));
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+#boton:hover{
+  background: linear-gradient(
+    to right,
+    var(--green),
+    var(--blueSky),
+    var(--blueSky),
+    var(--green)
+   
+  );
+  filter: drop-shadow(7px 4px 5px rgba(0, 0, 0, 0.5));
+  
+}
+
+#boton:active {
+  transform: translateY(4px) ; 
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
