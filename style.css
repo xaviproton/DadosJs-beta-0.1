@@ -1,18 +1,17 @@
 :root {
   --blue: #272643;
   --blue2: #ffffff;
-  --blue3: #E3F6F5;
+  --blue3: #e3f6f5;
   --blueSky: #809191;
-  --green: #2C698D;
+  --green: #2c698d;
   --red: #7f7e9594;
- 
 }
 @font-face {
   font-family: blocks;
   src: url(helveticanowtext-black-demo.ttf);
 }
 
-html{
+html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -21,7 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
- background-color: var(--white);
+  background-color: var(--white);
   min-height: 100vh;
   margin: 0;
   font-family: blocks;
@@ -56,12 +55,23 @@ body:before {
   font-size: 1.5rem;
   filter: drop-shadow(5px 7px 4px rgba(0, 0, 0, 0.5));
   color: var(--blue);
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 469px) {
+  #title {
+    font-size: 1rem;
+    padding: 5px;
+    filter: none;
+  }
 }
 .resultadoContainer {
   display: flex;
   justify-content: center;
-  width: 200px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   background-color: var(--red);
   border-radius: 100%;
   border: 1px dotted;
@@ -96,20 +106,18 @@ body:before {
   padding: 10px;
   transition: transform 0.2s ease-in-out;
 }
-#boton:hover{
+#boton:hover {
   background: linear-gradient(
     to right,
     var(--green),
     var(--blueSky),
     var(--blueSky),
     var(--green)
-   
   );
   filter: drop-shadow(7px 4px 5px rgba(0, 0, 0, 0.5));
-  
 }
 
 #boton:active {
-  transform: translateY(4px) ; 
+  transform: translateY(4px);
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
