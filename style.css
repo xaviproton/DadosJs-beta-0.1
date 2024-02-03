@@ -21,23 +21,8 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 0;
-  background-color: var(--white);
-  min-height: 100vh;
- 
+ height: 97vh;
   font-family: blocks;
-}
-body:before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #00000060;
-  opacity: 0.7;
-  box-shadow: inset 0 0 200px rgba(0, 128, 0, 0.5);
-  z-index: -1;
 }
 
 .container {
@@ -45,38 +30,46 @@ body:before {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 55rem;
-  height: 50rem;
-  padding: 10px;
-}
-.resultadoHorizontal{
-  display: flex;
-  flex-direction: column;
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
+
+
 #title {
-  font-size: 1.5rem;
-  filter: drop-shadow(5px 7px 4px rgba(0, 0, 0, 0.5));
+  font-size: 1.5rem; 
   color: var(--blue);
-  padding: 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  filter: drop-shadow(5px 7px 4px rgba(0, 0, 0, 0.5));
 }
-
 
 .resultadoContainer {
   display: flex;
   justify-content: center;
-  width: 8.5rem;
-  height: 11rem;
-  background-color: var(--red);
+  width: 7.5rem;
+  height: 7.5rem;
+  background-color:rgba(0, 0, 255, 0.626);
   border-radius: 100%;
-  border: 5px dotted;
- 
-  padding: 10px;
-  margin-top: 3rem;
+  border: 15px dotted;
+  padding: 5px;
+  box-shadow: 0 0 10px 5px rgba(199, 8, 8, 0.783);
+  background-clip: padding-box;
+  animation: girar-borde 1s linear;
+  margin: 2rem;
 }
+@keyframes girar-borde {
+  from {
+    border-color: red;
+  }
+  to {
+    border-color: blue;
+    transform: rotate(360deg);
+  }
+}
+
 .resultadoContainer h1 {
   display: flex;
   justify-content: center;
@@ -89,7 +82,7 @@ body:before {
   align-items: center;
   width: 8rem;
   height: 4rem;
-  margin-top: 6.5rem;
+  
   font-family: blocks;
   border: none;
   border-radius: 1rem;
@@ -101,8 +94,9 @@ body:before {
     var(--green)
   );
   filter: drop-shadow(5px 7px 7px rgba(0, 0, 0, 0.5));
-  padding: 10px;
-  transition: transform 0.2s ease-in-out;
+  padding: 5px;
+  transition: transform 0.02s ease-in-out;
+   margin: 2rem;
 }
 #boton:hover {
   background: linear-gradient(
@@ -121,7 +115,7 @@ body:before {
 }
 
 /* Resposnive movil pequeño */
-@media (max-width: 489px) {
+/* @media (max-width: 489px) {
   
   #title {
     font-size: 1rem;
@@ -136,18 +130,18 @@ body:before {
     width: 8.5rem;
     height: 8.5rem;
   }
-}
+} */
 
 /* Resposnive movil grande */
-@media (min-width: 490px) and (max-width: 767px){
+/* @media (min-width: 490px) and (max-width: 767px){
   #logo img{
     width: 220px;
     height: 220px;
   }
-}
+} */
 
 /* Resposnive tablet */
-@media (min-width: 768px) and (max-width: 996px){
+/* @media (min-width: 768px) and (max-width: 996px){
   #logo img{
     width: 250px;
     height: 250px;
@@ -156,6 +150,6 @@ body:before {
     width: 8.5rem;
     height: 8.5rem;
   }
-}
+} */
 
 /* Resposnive  horizontal */
