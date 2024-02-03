@@ -49,8 +49,10 @@ body {
 .resultadoContainer {
   display: flex;
   justify-content: center;
-  width: 7.5rem;
-  height: 7.5rem;
+  max-width: 7.5rem;
+  min-width: 7.5rem;
+  max-height: 7.5rem;
+  min-height: 7.5rem;
   background-color:rgba(0, 0, 255, 0.626);
   border-radius: 100%;
   border: 15px dotted;
