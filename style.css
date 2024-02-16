@@ -6,6 +6,7 @@
   --green: #2c698d;
   --red: #7f7e9594;
 }
+
 @font-face {
   font-family: blocks;
   src: url(helveticanowtext-black-demo.ttf);
@@ -16,12 +17,13 @@ html {
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
- height: 97vh;
+  height: 97vh;
   font-family: blocks;
 }
 
@@ -34,8 +36,6 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-
-
 
 #title {
   font-size: 1.5rem; 
@@ -59,31 +59,39 @@ body {
   padding: 5px;
   box-shadow: 0 0 10px 5px rgba(199, 8, 8, 0.783);
   background-clip: padding-box;
-  animation: girar-borde 1s linear;
+ 
   margin: 2rem;
+  animation: rotate 1s ease-in-out forwards;
 }
-@keyframes girar-borde {
+
+@keyframes rotate {
   from {
-    border-color: red;
+    transform: rotate(0deg);
   }
   to {
-    border-color: blue;
     transform: rotate(360deg);
   }
 }
+
+
 
 .resultadoContainer h1 {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--blue2);
+  font-size: 2vw; 
+ 
 }
+
+
 #boton {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 8rem;
-  height: 4rem;
+  width: 50%; /* Ajusta el ancho del botón al 50% del ancho de su contenedor */
+  height: auto; /* Permite que la altura del botón se ajuste automáticamente en función de su contenido */
+  padding: 1em; /* Añade un poco de espacio alrededor del contenido del botón */
   
   font-family: blocks;
   border: none;
@@ -96,10 +104,11 @@ body {
     var(--green)
   );
   filter: drop-shadow(5px 7px 7px rgba(0, 0, 0, 0.5));
-  padding: 5px;
   transition: transform 0.02s ease-in-out;
-   margin: 2rem;
+  margin: 2rem;
+  margin-top: -1px;
 }
+
 #boton:hover {
   background: linear-gradient(
     to right,
@@ -115,43 +124,3 @@ body {
   transform: translateY(4px);
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
-
-/* Resposnive movil pequeño */
-/* @media (max-width: 489px) {
-  
-  #title {
-    font-size: 1rem;
-    padding: 5px;
-    filter: none;
-  }
-  #logo img{
-    width: 200px;
-    height: 200px;
-  }
-  .resultadoContainer{
-    width: 8.5rem;
-    height: 8.5rem;
-  }
-} */
-
-/* Resposnive movil grande */
-/* @media (min-width: 490px) and (max-width: 767px){
-  #logo img{
-    width: 220px;
-    height: 220px;
-  }
-} */
-
-/* Resposnive tablet */
-/* @media (min-width: 768px) and (max-width: 996px){
-  #logo img{
-    width: 250px;
-    height: 250px;
-  }
-  .resultadoContainer{
-    width: 8.5rem;
-    height: 8.5rem;
-  }
-} */
-
-/* Resposnive  horizontal */

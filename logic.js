@@ -23,9 +23,34 @@ boton.addEventListener("click", () => {
     resultado.textContent = `${numeroAleatorio}`;
 });
 
+const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 
+const btn = document.getElementById("boton");
+const resultadoContainer = document.querySelector(".resultadoContainer"); 
 
+btn.addEventListener("click", function () {
 
+  function getRandomNumber() {
+    return Math.floor(Math.random() * hex.length);
+  }
 
+  let hexColor = "#";
 
+  // Generate a random hex color
+  for (let i = 0; i < 6; i++) {
+    hexColor += hex[getRandomNumber()];
+  }
+
+  
+  resultadoContainer.style.borderColor = hexColor;
+  resultadoContainer.style.backgroundColor = hexColor;
+
+ 
+  resultadoContainer.classList.add("rotate"); // Add a class for animation
+
+  // Remove the animation class after rotation duration is over
+  setTimeout(() => {
+    resultadoContainer.classList.remove("rotate");
+  }, 1000); // Adjust duration as needed (in milliseconds)
+});
  
